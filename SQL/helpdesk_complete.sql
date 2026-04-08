@@ -1,7 +1,6 @@
 -- ============================================================
 -- HELPDESK PERFORMANCE & SLA ANALYTICS
 -- COMPLETE SQL SCRIPT — All Steps Combined
-
 -- ============================================================
 
 USE master;
