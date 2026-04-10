@@ -49,7 +49,6 @@ for i, name in enumerate(agent_names):
     })
 
 agents = pd.DataFrame(agents_list)
-
 # ─────────────────────────────────────────
 # 3. SLA POLICY
 # ─────────────────────────────────────────
@@ -75,7 +74,6 @@ sla_policy = pd.DataFrame([
     {'policy_id': 19, 'category': 'Other',    'priority': 'Medium',   'response_sla_hrs': 8,  'resolution_sla_hrs': 48, 'escalation_hrs': 24},
     {'policy_id': 20, 'category': 'Other',    'priority': 'Low',      'response_sla_hrs': 12, 'resolution_sla_hrs': 96, 'escalation_hrs': 72},
 ])
-
 # ─────────────────────────────────────────
 # 4. TICKETS
 # ─────────────────────────────────────────
