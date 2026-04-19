@@ -49,6 +49,7 @@ for i, name in enumerate(agent_names):
     })
 
 agents = pd.DataFrame(agents_list)
+
 # ─────────────────────────────────────────
 # 3. SLA POLICY
 # ─────────────────────────────────────────
