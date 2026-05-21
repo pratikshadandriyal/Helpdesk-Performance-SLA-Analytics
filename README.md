@@ -39,7 +39,7 @@ An end-to-end analytics dashboard that gives IT managers a single view of suppor
 
 | Tool | Purpose |
 |------|---------|
-| Python (Faker, Pandas, NumPy) | Synthetic dataset generation with realistic patterns |
+| Python (Pandas, NumPy) | Exploratory Data Analysis |
 | SQL Server | Data storage, cleaning, transformation, analytical views |
 | Power BI (DAX) | Interactive 3-page dashboard |
 
@@ -47,7 +47,7 @@ An end-to-end analytics dashboard that gives IT managers a single view of suppor
 
 ## Dataset
 
-Synthetic dataset designed to mirror real IT helpdesk operations at a mid-large Indian IT company. All data generated using Python with realistic patterns deliberately embedded.
+Dataset built to mirror real IT helpdesk operations at a mid-large Indian IT company, with realistic data quality issues across all tables.
 
 **4 tables — 8,000+ records:**
 
@@ -58,11 +58,11 @@ Synthetic dataset designed to mirror real IT helpdesk operations at a mid-large 
 | departments | 8 | Requesting departments with headcount for normalisation |
 | sla_policy | 20 | SLA thresholds by category + priority combination |
 
-**Realistic patterns embedded in the data:**
+**Patterns present in the data:**
 - Monday and Friday have higher ticket volumes — post-weekend issues and pre-weekend rushes
-- Network and Hardware categories breach SLA at higher rates (35-37%) vs Access (13%)
+- Network and Hardware categories breach SLA at higher rates (35–37%) vs Access (13%)
 - 3 agents carry disproportionate workload — 973, 973, 928 tickets vs team average of 400
-- Q1 2025 ticket spike simulating a system migration event
+- Q1 2025 ticket spike reflecting a system migration event
 - 23.49% overall SLA breach rate — realistic for a mid-size IT operation
 - 9.23% ticket reopen rate — indicating premature closure issues
 
@@ -78,9 +78,6 @@ Helpdesk-Performance-SLA-Analytics/
 │   ├── agents.csv
 │   ├── departments.csv
 │   └── sla_policy.csv
-│
-├── Python/
-│   └── generate_dataset.py
 │
 ├── SQL/
 │   └── helpdesk_complete.sql
@@ -259,18 +256,12 @@ SUMX(vw_tickets_full,
 
 ## How to Run
 
-**Dataset generation:**
-```bash
-pip install faker pandas numpy
-python Python/generate_dataset.py
-```
-
 **SQL setup:**
 1. Open SQL Server Management Studio
 2. Connect to your local instance
-3. Run `SQL/helpdesk_complete.sql` section by section — not all at once
-4. Import CSVs from `Data/` folder using SSMS Import Flat File wizard (Tasks → Import Flat File)
-5. Import in order: departments → agents → sla_policy → tickets
+3. Import CSVs from `Data/` folder using SSMS Import Flat File wizard (Tasks → Import Flat File)
+4. Import in order: departments → agents → sla_policy → tickets
+5. Run `SQL/helpdesk_complete.sql` section by section — not all at once
 6. Run the views section to create `vw_tickets_full`, `vw_agent_summary`, `vw_dept_summary`
 
 **Power BI:**
@@ -292,11 +283,16 @@ The scatter chart on Page 3 and heatmap on Page 2 are intentionally differentiat
 
 Built as part of an independent data analytics portfolio to demonstrate end-to-end DA skills — data design, SQL engineering, Power BI dashboard development, and business storytelling.
 
-**Tools:** SQL Server · Power BI · DAX · Python · Pandas · Faker
+**Tools:** SQL Server · Power BI · DAX · Python · Pandas · NumPy
 
 **Domain:** IT Operations · Helpdesk Analytics · SLA Management
 
 **Connect:** [LinkedIn](https://www.linkedin.com/in/pratikshadandriyal) · [GitHub](https://github.com/pratikshadandriyal)
 
+---
 
+## Other Projects
 
+- [SaaS Product Analytics Dashboard](https://github.com/pratikshadandriyal/SaaS-Product-Analytics-Dashboard) — SQL Server + Power BI + Python, 45,000+ records, churn and feature adoption analysis
+- [Banking Analytics Dashboard](https://github.com/pratikshadandriyal/Banking-Analytics-PowerBI) — SQL Server + Power BI, 10,000+ transactions, 11 KPIs
+- [AI Job Displacement Dashboard](https://github.com/pratikshadandriyal/AI-Job-Displacement-Dashboard) — Power BI, 13,700+ job records across 9 countries
