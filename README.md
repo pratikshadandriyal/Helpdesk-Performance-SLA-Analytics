@@ -302,4 +302,4 @@ Built as part of an independent data analytics portfolio to demonstrate end-to-e
 ## Other Projects
 
 - [SaaS Product Analytics Dashboard](https://github.com/pratikshadandriyal/SaaS-Product-Analytics-Dashboard) — SQL Server + Power BI + Python, 45,000+ records, churn and feature adoption analysis
-- [AI Job Displacement Dashboard](https://github.com/pratikshadandriyal/AI-Job-Displacement-Dashboard) — Power BI, 13,700+ job records across 9 countries
+- [AI Job Displacement Dashboard](https://github.com/pratikshadandriyal/AI-Job-Displacement-Reskilling-Dashboard) — Power BI, 13,700+ job records across 9 countries
